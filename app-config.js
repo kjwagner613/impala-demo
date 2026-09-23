@@ -1,5 +1,5 @@
 window.KW_PLAYER_CONFIG = window.KW_PLAYER_CONFIG || {
-  apiBaseUrl: "https://signer.discrete-dev.com/",
+  apiBaseUrl: "https://signer.discrete-dev.com",
   liveStreamApiBaseUrl: "https://family-impala-live-248de01b2798.herokuapp.com",
   localLiveStreamApiBaseUrl:
     "https://family-impala-live-248de01b2798.herokuapp.com",
