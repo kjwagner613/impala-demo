@@ -97,3 +97,7 @@ The public `POST /api/feedback` route sends the inline player feedback to email 
 - `RESEND_API_KEY` (required to enable delivery)
 - `FEEDBACK_EMAIL` (optional, defaults to `kevin@discrete-dev.com`)
 - `FEEDBACK_FROM_EMAIL` (optional; use a sender from a domain verified in Resend)
+
+## Ubuntu gateway deployment
+
+For a systemd and Nginx deployment of this signer on the Ubuntu gateway, follow [`deploy/UBUNTU.md`](deploy/UBUNTU.md). It keeps the Heroku endpoint active until the new API hostname is verified and the app config is cut over.
