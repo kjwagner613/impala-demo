@@ -18,7 +18,7 @@ const PlaylistStore = (() => {
     },
     {
       id: "songs",
-      name: "Vinnie's Playlist",
+      name: "Built-in Playlist",
       source: () => (typeof songs !== "undefined" && Array.isArray(songs) ? songs : [])
     }
   ];
