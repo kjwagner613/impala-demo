@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Impala Streamer</title>
+    <title>Impala Demo Edition</title>
     <link rel="stylesheet" href="styles.css?v=family-gel-20260918a" />
     <link rel="icon" href="./assets/ddMusic.ico" />
     <script src="app-config.js?v=family-metadata-heroku-20260831a"></script>
@@ -26,11 +26,11 @@
               id="impala-title"
               class="eyebrow impala-title"
               aria-haspopup="dialog"
-              title="About Impala Streamer"
+              title="About Impala Demo Edition"
             >
               <img class="compact-brand-logo" src="assets/ddMusic.ico" alt="" />
               <span class="compact-brand-copy">
-                <span id="impala-edition-name">Impala Streamer</span>
+                <span id="impala-edition-name">Impala Demo Edition</span>
                 <span class="compact-company-name">Discrete Development LLC</span>
               </span>
             </button>
@@ -40,17 +40,15 @@
                 class="account-link"
                 id="about-link"
                 aria-haspopup="dialog"
-                title="About Impala Streamer"
+                title="About Impala Demo Edition"
               >
                 About
               </button>
-              <a class="account-link" id="account-link" href="signin.html"
-                >Sign In</a
-              >
+              <span class="account-link" id="account-link" aria-label="Authentication disabled">Demo Mode</span>
             </div>
             <p id="compact-library-name" class="compact-library-name">Library</p>
           </div>
-          <h1 id="card-title">Impala Streamer</h1>
+          <h1 id="card-title">Impala Demo Edition</h1>
           <p class="card-subtitle"></p>
         </section>
 
@@ -249,7 +247,7 @@
             <div class="userGuideLink">
               <a href="songlist.html" id="songList">Library & Playlists</a>
               <a href="preferences.html">Settings</a>
-              <a href="live.html" data-live-stream-surface hidden>Live Stream</a>
+              <a href="live.html">Live Stream</a>
               <a href="userGuide/userGuide.html" target="_blank" rel="noopener"
                 >User Guide</a
               >
@@ -360,7 +358,7 @@
           </div>
         </section>
 
-        <p class="player-trademark">Impala Streamer&trade;</p>
+        <p class="player-trademark">Impala Demo Edition</p>
       </main>
     </div>
 
@@ -368,17 +366,17 @@
       <div class="about-panel">
         <div class="about-header">
           <div>
-            <p class="eyebrow">About ImpalaStreamer</p>
-            <h2 id="about-title">Impala Streamer</h2>
+            <p class="eyebrow">About the demo</p>
+            <h2 id="about-title">Impala Demo Edition</h2>
           </div>
           <button type="button" id="about-close" class="about-close" aria-label="Close about">&times;</button>
         </div>
 
         <section class="about-section about-identity">
-          <img src="assets/ddMusic.ico" alt="Impala Streamer" />
+          <img src="assets/ddMusic.ico" alt="Impala Demo Edition" />
           <div>
-            <p id="about-version" class="about-version">v1.2.0 · Build 2026.08.13</p>
-            <p class="about-tagline">Stability first. Performance second. Hype never.</p>
+            <p id="about-version" class="about-version">v0.001-demo · UI Emulation</p>
+            <p class="about-tagline">A self-contained example of the Impala player interface.</p>
           </div>
         </section>
 
@@ -407,9 +405,7 @@
         <section class="about-section">
           <h3>System Philosophy</h3>
           <p>
-            ImpalaStreamer is built for users, not marketers. Every feature is tested under real-world
-            conditions: normal hardware, normal networks, and multi-day uptime. No shortcuts, no fragile
-            dependencies, no demo-only behavior.
+            Explore the player, playlist editor, settings, guide, and live webcast controls without an account or Impala service.
           </p>
           <p>The goal is simple: start bringing back that rarest of achievements, "It just works."</p>
         </section>
@@ -424,47 +420,12 @@
           </dl>
         </section>
 
-        <section class="about-section about-metadata-credits">
-          <h3>Metadata Credits</h3>
-          <a
-            class="tmdb-credit"
-            href="https://www.themoviedb.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit The Movie Database"
-          >
-            <img
-              src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg"
-              alt="TMDB"
-            />
-          </a>
-          <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
-          <p>
-            Album metadata may be provided by
-            <a href="https://musicbrainz.org/" target="_blank" rel="noopener noreferrer">MusicBrainz</a>
-            and artwork by
-            <a href="https://coverartarchive.org/" target="_blank" rel="noopener noreferrer">Cover Art Archive</a>.
-          </p>
-        </section>
+        <section class="about-section"><h3>Local Demo Data</h3><p>Catalog descriptions and poster mappings are read from <code>metadata.json</code> in this folder.</p></section>
 
         <section class="about-section about-legal">
           <h3>Legal</h3>
-          <p>Impala Streamer&trade; is a trademark of Discrete Development LLC.</p>
-          <p>Copyright &copy; 2024&ndash;2026 Discrete Development LLC. All rights reserved.</p>
+          <p>Demo media URLs are configured in the local demo catalog.</p>
         </section>
-      </div>
-    </dialog>
-
-    <dialog id="about-promo-dialog" class="about-promo-dialog" aria-labelledby="about-promo-title">
-      <div class="about-promo-panel">
-        <div class="about-promo-header">
-          <div>
-            <p class="eyebrow">From the archive</p>
-            <h2 id="about-promo-title">A Discrete Development Original</h2>
-          </div>
-          <button type="button" id="about-promo-close" class="about-close" aria-label="Close promo">&times;</button>
-        </div>
-        <div id="about-promo-frame-host" class="about-promo-frame-host"></div>
       </div>
     </dialog>
 

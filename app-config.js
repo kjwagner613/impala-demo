@@ -1,25 +1,22 @@
 window.KW_PLAYER_CONFIG = window.KW_PLAYER_CONFIG || {
-  apiBaseUrl: "https://signer.discrete-dev.com",
-  liveStreamApiBaseUrl: "https://family-impala-live-248de01b2798.herokuapp.com",
-  localLiveStreamApiBaseUrl:
-    "https://family-impala-live-248de01b2798.herokuapp.com",
+  demoMode: true,
+  apiBaseUrl: "",
+  liveStreamApiBaseUrl: "",
+  localLiveStreamApiBaseUrl: "",
   syncPlayApiBaseUrl: "",
   coastApiBaseUrl: "",
-  // Public, read-only metadata sidecar; private playback remains on Family services.
-  metadataApiUrl:
-    "https://family-impala-metadata-93d758b55ecd.herokuapp.com/api/metadata",
-  authStorageKey: "impalaFamily.authSession",
-  playlistStoragePrefix: "impalaFamily",
+  metadataApiUrl: "",
+  authStorageKey: "impalaDemo.demoSession",
+  playlistStoragePrefix: "impalaDemo",
   instanceStorageId: "",
   builtInPlaylistsEnabled: true,
-  enabledBuiltInPlaylistIds: ["songs"],
-  brandName: "Impala Streamer",
-  editionName: "Impala Family Streamer",
-  appVersion: "1.2.0",
-  appBuildDate: "2026.08.13",
-  mkvPlaybackEnabled: true,
-  localHelperDownloadUrl:
-    "https://www.discrete-dev.com/downloads.html#impalaHelper",
+  enabledBuiltInPlaylistIds: ["songsKw"],
+  brandName: "Impala Demo Edition",
+  editionName: "UI Emulation",
+  appVersion: "0.001-demo",
+  appBuildDate: "2026.09.28",
+  mkvPlaybackEnabled: false,
+  localHelperDownloadUrl: "",
 };
 
 window.ImpalaConfig =
@@ -70,11 +67,13 @@ window.ImpalaConfig =
     }
 
     function getCloudApiBaseUrl() {
+      if (config.demoMode === true) return "";
       const preferences = readPreferences();
       return cleanUrl(preferences.cloudApiBaseUrl || config.apiBaseUrl || "");
     }
 
     function getLiveStreamApiBaseUrl() {
+      if (config.demoMode === true) return "";
       const hostname = window.location?.hostname || "";
       const isLocalPreview =
         hostname === "localhost" ||
@@ -87,6 +86,7 @@ window.ImpalaConfig =
     }
 
     function getSyncPlayApiBaseUrl() {
+      if (config.demoMode === true) return "";
       const preferences = readPreferences();
       return cleanUrl(
         preferences.syncPlayApiBaseUrl || config.syncPlayApiBaseUrl || "",
@@ -94,6 +94,7 @@ window.ImpalaConfig =
     }
 
     function getCoastApiBaseUrl() {
+      if (config.demoMode === true) return "";
       const preferences = readPreferences();
       return cleanUrl(
         preferences.coastApiBaseUrl || config.coastApiBaseUrl || "",
@@ -101,6 +102,7 @@ window.ImpalaConfig =
     }
 
     function getInstanceId() {
+      if (config.demoMode === true) return "";
       const preferences = readPreferences();
       return String(preferences.instanceId || "").trim();
     }

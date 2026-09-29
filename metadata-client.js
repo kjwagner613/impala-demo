@@ -12,6 +12,7 @@
     source: document.getElementById("media-metadata-source")
   };
   const cache = new Map();
+  let catalogPromise;
   let requestId = 0;
   let activeKey = "";
   let ownerArtworkUrl = "";
@@ -55,21 +56,31 @@
 
   async function lookup({ kind, title = "", artist = "", year = "", provider = "", providerId = "" } = {}) {
     if (!kind || (!title && !providerId)) return null;
+    if (window.UiPreferences?.getPreferences?.().metadataEnabled === false) return null;
     const key = `${kind}:${provider}:${providerId}:${title}:${artist}:${year}`.toLowerCase();
     if (cache.has(key)) return cache.get(key);
-    const endpoint = window.ImpalaConfig?.getMetadataApiUrl?.() || "";
-    if (!endpoint) return null;
-    const params = new URLSearchParams({ kind, title });
-    if (artist) params.set("artist", artist);
-    if (year) params.set("year", year);
-    if (provider) params.set("provider", provider);
-    if (providerId) params.set("providerId", providerId);
-    const response = await fetch(`${endpoint}?${params}`, { headers: { Accept: "application/json" } });
-    if (!response.ok) return null;
-    const payload = await response.json();
-    if (!payload?.metadata) return null;
-    cache.set(key, payload.metadata);
-    return payload.metadata;
+    catalogPromise ||= fetch("metadata.json", { headers: { Accept: "application/json" } })
+      .then((response) => response.ok ? response.json() : null)
+      .catch(() => null);
+    const catalog = await catalogPromise;
+    if (!catalog) return null;
+    const entries = kind === "movie" ? (catalog.videos || []) : (catalog.albums || []);
+    const found = entries.find((entry) =>
+      String(entry.id || "").toLowerCase() === String(providerId).toLowerCase()
+      || String(entry.title || "").toLowerCase() === String(title).toLowerCase()
+    );
+    if (!found) return null;
+    const posterUrl = catalog.posters?.[found.poster] || "";
+    const metadata = {
+      kind,
+      title: found.title || title,
+      artist: found.artist || artist,
+      year: found.year || year,
+      posterUrl,
+      artworkUrl: posterUrl
+    };
+    cache.set(key, metadata);
+    return metadata;
   }
 
   async function showFor(media, mediaKind = "audio") {

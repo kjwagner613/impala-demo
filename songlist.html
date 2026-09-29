@@ -4,9 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Impala Streamer Library</title>
+  <title>Impala Demo Edition — Library</title>
   <link rel="stylesheet" href="styles.css?v=video-poster-placeholder-20260831a" />
   <link rel="icon" href="./assets/ddMusic.ico" />
+  <style>
+    .demo-library-card { display: flex; align-items: center; gap: .7rem; min-height: 4.5rem; color: var(--theme-text); font: inherit; text-align: left; cursor: pointer; }
+    .demo-library-card strong { color: var(--theme-text); }
+    .demo-library-card .library-metadata-artwork { flex: 0 0 3.25rem; }
+    .demo-library-track { display: block; width: 100%; padding: .7rem; color: var(--theme-text); font: inherit; text-align: left; cursor: pointer; }
+  </style>
 </head>
 
 <body>
@@ -106,13 +112,13 @@
         <section id="custom-library-panel" class="library-panel" hidden>
           <div class="library-panel-header">
             <div class="library-panel-title-row">
-              <h2>S4 Library</h2>
+              <h2>Demo Library</h2>
               <div class="library-browse-toggle" role="group" aria-label="Browse media type">
                 <button type="button" id="library-mode-audio-btn" class="library-mode-btn is-active" aria-pressed="true">Audio</button>
                 <button type="button" id="library-mode-video-btn" class="library-mode-btn" aria-pressed="false">Video</button>
               </div>
             </div>
-            <p class="library-panel-copy">Preview on the right, open to drill down, or add a full folder straight into a playlist.</p>
+            <p class="library-panel-copy">Browse the local demo catalog. No signer or cloud library is used.</p>
           </div>
           <div id="selected-tracks-panel" class="selected-tracks-panel library-selection-panel">
             <span id="selected-tracks-count">0 selected</span>
@@ -179,6 +185,7 @@
   <script src="metadata-client.js?v=metadata-sidecar-20260822a"></script>
   <script src="library-metadata-client.js?v=playlist-mosaic-20260822a"></script>
   <script src="songlist.js?v=video-poster-placeholder-20260831a"></script>
+  <script src="demo-library.js"></script>
 </body>
 
 </html>

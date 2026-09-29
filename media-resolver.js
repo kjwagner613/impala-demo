@@ -39,6 +39,7 @@
   }
 
   function isLocalHelperEnabled() {
+    if (window.KW_PLAYER_CONFIG?.demoMode === true) return false;
     const preferencesApi = window.UiPreferences;
     const preferences = preferencesApi?.getPreferences?.() || {};
     return preferences.localHelperEnabled === true;

@@ -330,21 +330,6 @@ document.addEventListener("DOMContentLoaded", () => {
     clearAboutPromo();
   }
 
-  function openAboutPromo() {
-    if (!aboutPromoDialog || !aboutPromoFrameHost || aboutPromoDialog.open) {
-      return;
-    }
-
-    const iframe = document.createElement("iframe");
-    iframe.src = "https://mega.nz/embed/eloSlIDT#6dsQyoDZVPyroKYRZ-9K1ATKp7enhixE7pAAH0_oBDM!1a";
-    iframe.title = "Valued artifact from our history.";
-    iframe.allow = "autoplay; fullscreen";
-    iframe.allowFullscreen = true;
-    iframe.referrerPolicy = "no-referrer";
-    aboutPromoFrameHost.replaceChildren(iframe);
-    aboutPromoDialog.showModal();
-  }
-
   function getMediaElementForKind(kind) {
     if (kind === "video") {
       return videoPlayer || audioPlayer;
@@ -514,11 +499,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     if (accountLink) {
-      accountLink.textContent = isLoggedIn ? "Current User" : "Sign In";
+      accountLink.textContent = "Demo Mode";
       accountLink.classList.toggle("is-authorized", isLoggedIn);
       accountLink.title = isLoggedIn
-        ? `Signed in as ${authSession.displayName || authSession.username}`
-        : "Sign in for private playback";
+        ? "Authentication is disabled in this demo."
+        : "Authentication is disabled in this demo.";
     }
 
     if (!authPanel || !authStatus || !authForm || !authLogoutButton) {
@@ -1673,7 +1658,7 @@ document.addEventListener("DOMContentLoaded", () => {
       onClosePromo: closeAboutPromo,
       onPromoClosed: clearAboutPromo,
       onGlobalKeydown: handleGlobalHotkeys,
-      onOpenPromo: openAboutPromo
+      onOpenPromo() {}
     }
   });
   ambientIdentityController = window.AmbientIdentity?.init({

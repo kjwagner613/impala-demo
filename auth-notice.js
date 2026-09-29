@@ -46,7 +46,7 @@
         <strong>Sign-in needed</strong>
         <span>Your private library session has expired or is not active.</span>
       </div>
-      <a href="signin.html">Sign In</a>
+      <span>Authentication is disabled in this demo.</span>
     `;
 
     const target = document.querySelector(targetSelector);

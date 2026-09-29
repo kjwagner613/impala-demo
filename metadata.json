@@ -1,0 +1,31 @@
+{
+  "brand": "Impala Demo Edition",
+  "edition": "UI Emulation",
+  "version": "0.001-demo",
+  "posters": {
+    "poster_everybody": "assets/art-posters/everybody.jpg",
+    "poster_rain": "assets/art-posters/rain.webp",
+    "poster_grace": "assets/art-posters/amazingGrace.jpg"
+  },
+  "albums": [
+    { "id": "album_everybody", "title": "Everybody", "artist": "Ingrid Michaelson", "poster": "poster_everybody", "tracks": ["track1"] },
+    { "id": "album_rain", "title": "Singin' in the Rain", "artist": "Gene Kelly", "poster": "poster_rain", "tracks": ["track2"] },
+    { "id": "album_amazing_grace", "title": "Amazing Grace", "artist": "Choir", "poster": "poster_grace", "tracks": ["track3"] }
+  ],
+  "tracks": [
+    { "id": "track1", "title": "Incredible Love", "artist": "Ingrid Michaelson", "album": "Everybody", "duration": 351, "poster": "poster_everybody", "mediaType": "audio", "url": "https://dl.dropboxusercontent.com/scl/fi/owd2m0xdvjw9vn3lfgd8a/05-Incredible-Love.mp3?rlkey=c3y1mmiyh1dlol6w23ylzetaz&st=tu2c6xsj&dl=0" },
+    { "id": "track2", "title": "Singin' in the Rain", "artist": "Gene Kelly", "album": "Singin' in the Rain", "duration": 198, "poster": "poster_rain", "mediaType": "video", "url": "https://dl.dropboxusercontent.com/scl/fi/17lxpgtklvm8nwrjsezxl/Singin-in-the-Rain.mp4?rlkey=td6jf2s4k6u37raps5tr0n6k3&st=7bhllzxj&dl=0" },
+    { "id": "track3", "title": "Amazing Grace", "artist": "Choir", "album": "Amazing Grace", "duration": 244, "poster": "poster_grace", "mediaType": "audio", "url": "https://dl.dropboxusercontent.com/scl/fi/gwm4d92zfjlximgkrc1xn/Amazing-Grace.mp3?rlkey=lnjq4ifc4vsiuo2z3m742waer&st=4dvk47sl&dl=0" }
+  ],
+  "videos": [
+    { "id": "movie_grace", "title": "Amazing Grace", "year": 1951, "duration": 5400, "poster": "poster_grace", "url": "https://dl.dropboxusercontent.com/scl/fi/ycemarsa7aawslapmmnqb/Amazing-Grace.mp4?rlkey=woo66xdupbi1gnl7a5f04lozi&st=7vnwq58k&dl=0" },
+    { "id": "movie_rain", "title": "Singin' in the Rain", "year": 1952, "duration": 4800, "poster": "poster_rain", "url": "https://dl.dropboxusercontent.com/scl/fi/17lxpgtklvm8nwrjsezxl/Singin-in-the-Rain.mp4?rlkey=td6jf2s4k6u37raps5tr0n6k3&st=7bhllzxj&dl=0" }
+  ],
+  "webcasts": [
+    { "id": "impala-main", "title": "Impala Live", "description": "Public HLS pilot test stream.", "category": "Pilot", "poster": "poster_everybody", "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8" },
+    { "id": "weathernation", "title": "WeatherNation", "description": "Continuous national weather coverage and forecasts.", "category": "Weather", "poster": "poster_everybody", "url": "https://stream.weathernationtv.com/WNTVStirr_eokxldieulowixkdimn/ND1/playlistSCTE35.m3u8" },
+    { "id": "cbs-news-247", "title": "CBS News 24/7", "description": "Continuous national news coverage from CBS News.", "category": "News", "poster": "poster_rain", "url": "https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master.m3u8" },
+    { "id": "california-music-channel", "title": "California Music Channel", "description": "Continuous music-video programming from California Music Channel.", "category": "Music", "poster": "poster_grace", "url": "https://cmc-ono.amagi.tv/playlist.m3u8" },
+    { "id": "30a-music", "title": "30A Music", "description": "Continuous music-video programming from 30A TV.", "category": "Music", "poster": "poster_everybody", "url": "https://30a-tv.com/music.m3u8" }
+  ]
+}

@@ -3839,9 +3839,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   renderPage();
-  authNotice?.watch?.({
-    targetSelector: ".titles-row",
-    needsPrivateAccess: true
-  });
   initializeRebuildControl();
 });

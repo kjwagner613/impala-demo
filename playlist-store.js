@@ -13,7 +13,7 @@ const PlaylistStore = (() => {
   const builtInDefinitions = [
     {
       id: "songsKw",
-      name: "Shared Playlist 1",
+      name: "Demo Tracks",
       source: () => (typeof songsKw !== "undefined" && Array.isArray(songsKw) ? songsKw : [])
     },
     {
