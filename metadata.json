@@ -5,6 +5,7 @@
   "posters": {
     "poster_everybody": "assets/art-posters/everybody.jpg",
     "poster_rain": "assets/art-posters/rain.webp",
+    "poster_cast": "assets/art-posters/webcast.png",
     "poster_grace": "assets/art-posters/amazingGrace.jpg"
   },
   "albums": [
@@ -22,10 +23,10 @@
     { "id": "movie_rain", "title": "Singin' in the Rain", "year": 1952, "duration": 4800, "poster": "poster_rain", "url": "https://dl.dropboxusercontent.com/scl/fi/17lxpgtklvm8nwrjsezxl/Singin-in-the-Rain.mp4?rlkey=td6jf2s4k6u37raps5tr0n6k3&st=7bhllzxj&dl=0" }
   ],
   "webcasts": [
-    { "id": "impala-main", "title": "Impala Live", "description": "Public HLS pilot test stream.", "category": "Pilot", "poster": "poster_everybody", "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8" },
-    { "id": "weathernation", "title": "WeatherNation", "description": "Continuous national weather coverage and forecasts.", "category": "Weather", "poster": "poster_everybody", "url": "https://stream.weathernationtv.com/WNTVStirr_eokxldieulowixkdimn/ND1/playlistSCTE35.m3u8" },
-    { "id": "cbs-news-247", "title": "CBS News 24/7", "description": "Continuous national news coverage from CBS News.", "category": "News", "poster": "poster_rain", "url": "https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master.m3u8" },
-    { "id": "california-music-channel", "title": "California Music Channel", "description": "Continuous music-video programming from California Music Channel.", "category": "Music", "poster": "poster_grace", "url": "https://cmc-ono.amagi.tv/playlist.m3u8" },
-    { "id": "30a-music", "title": "30A Music", "description": "Continuous music-video programming from 30A TV.", "category": "Music", "poster": "poster_everybody", "url": "https://30a-tv.com/music.m3u8" }
+    { "id": "impala-main", "title": "Impala Live", "description": "Public HLS pilot test stream.", "category": "Pilot", "poster": "poster_cast", "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8" },
+    { "id": "weathernation", "title": "WeatherNation", "description": "Continuous national weather coverage and forecasts.", "category": "Weather", "poster": "poster_cast", "url": "https://stream.weathernationtv.com/WNTVStirr_eokxldieulowixkdimn/ND1/playlistSCTE35.m3u8" },
+    { "id": "cbs-news-247", "title": "CBS News 24/7", "description": "Continuous national news coverage from CBS News.", "category": "News", "poster": "poster_cast", "url": "https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master.m3u8" },
+    { "id": "california-music-channel", "title": "California Music Channel", "description": "Continuous music-video programming from California Music Channel.", "category": "Music", "poster": "poster_cast", "url": "https://cmc-ono.amagi.tv/playlist.m3u8" },
+    { "id": "30a-music", "title": "30A Music", "description": "Continuous music-video programming from 30A TV.", "category": "Music", "poster": "poster_cast", "url": "https://30a-tv.com/music.m3u8" }
   ]
 }
