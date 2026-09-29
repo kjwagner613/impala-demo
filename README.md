@@ -6,6 +6,6 @@ This folder is a standalone, no-auth UI demo copied from `impalaStreamer-family`
 
 Serve this folder with any static file server and open `index.html`. A static server is needed so the browser can load the local `metadata.json` catalog. No Impala backend, sign-in provider, metadata service, or live-session service is required.
 
-The player, library editor, guide, about panel, settings, artwork, and webcast catalog are local. Audio and video playback use the Dropbox URLs in `songs-ks.js` and `metadata.json`; webcast URLs are listed in `metadata.json`. Replace example media URLs with streams and files intended for public demo playback. Browsers may require HTTPS for remote media and HLS.
+The player, library editor, guide, about panel, settings, and artwork are local. Audio and video playback use the Dropbox URLs in `songs-ks.js` and `metadata.json`. Replace example media URLs with files intended for public demo playback.
 
-`metadata.json` is the local metadata-service emulation. It contains three albums, three tracks, two videos, and five approved webcast entries copied from the live-service catalog. The webcasts play directly in the browser; the demo does not call the live-session service.
+`metadata.json` is the local metadata-service emulation. It contains three albums, three tracks, and two videos.
